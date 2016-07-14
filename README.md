@@ -1,4 +1,20 @@
 object-filter_one
 =======
 
-object filter one for the browser and node.js
+returns first element that pass the test implemented by the provided function.
+
+
+```javascript
+var objectFilterOne = require("@nathanfaucett/object-filter_one");
+
+
+objectFilterOne({
+        a: "a",
+        b: "b",
+        c: "c"
+    },
+    function(value, key) {
+        return key === "b";
+    }
+) === "b";
+```
